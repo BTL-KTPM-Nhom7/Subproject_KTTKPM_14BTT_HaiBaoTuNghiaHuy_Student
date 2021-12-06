@@ -12,4 +12,4 @@ eureka:
     fetch-registry:
       value: true;
     service-url:
-      defaultZone: https://subprj-discovery.herokuapp.com
+      defaultZone: https://subprj-discovery.herokuapp.com/eureka
