@@ -15,3 +15,12 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     instance:
       hostname: localhost
+
+resilience4j:
+  retry:
+    instances:
+      basic:
+        #Số lần thử tối đa (bao gồm cả cuộc gọi đầu tiên là lần thử đầu tiên)
+        maxRetryAttemps:  2
+        #Khoảng thời gian chờ cố định giữa các lần thử lại
+        waitDuration:  5s
