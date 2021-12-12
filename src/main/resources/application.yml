@@ -13,3 +13,12 @@ eureka:
       value: true;
     service-url:
       defaultZone: https://subprj-discovery.herokuapp.com/eureka
+
+resilience4j:
+  retry:
+    instances:
+      basic:
+        #Số lần thử tối đa (bao gồm cả cuộc gọi đầu tiên là lần thử đầu tiên)
+        maxRetryAttemps:  2
+        #Khoảng thời gian chờ cố định giữa các lần thử lại
+        waitDuration:  5s
